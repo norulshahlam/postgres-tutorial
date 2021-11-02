@@ -12,11 +12,14 @@ SQL file can be found here
 
 	docker container ps
 
-### Copy your SQL file into your Docker environment
+### Copy all your SQL file into your Docker environment
 
 Make sure file is in current directory. 'bebbbff75bfd' is the container id. So make sure you copy your container id.
 
 	docker cp person.sql bebbbff75bfd:/person.sql
+	docker cp car.sql bebbbff75bfd:/car.sql
+	docker cp car-person.sql bebbbff75bfd:/car-person.sql
+	docker cp car-person-uuid.sql bebbbff75bfd:/car-person-uuid.sql
 
 ### Enter your container environment
 
@@ -48,7 +51,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	date_of_birth DATE not null,
 	email VARCHAR(50) );
 
-### Read SQL file
+### Read this sql file to create new tables and insert data
 
 	\i person.sql
 
@@ -91,7 +94,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 		price INT NOT NULL
 	);
 
-### Read SQL file
+### Read this sql file to create new tables and insert data
 
 	\i car.sql
 
@@ -163,8 +166,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ## RELATIONAL TABLE  
 
-
-### Drop exisitng tables
+### Drop this 2 exisiting tables as we will be using another version of this 2 tables in car-person.sql
 	
 	drop table car;
 	drop table person;
@@ -191,13 +193,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	);
 
 
-### Copy your SQL file into your Docker environment  
-
-Make sure file is in current directory 
-
-	docker cp car-person.sql bebbbff75bfd:/car-person.sql
-
-### Read sql file
+### Read this sql file to create new tables and insert data
 
 	\i car-person.sql
 
@@ -234,25 +230,22 @@ PostgreSQL Extensions are a plug and play set of enhancements that add an extra 
 	select uuid_generate_v4();
 
 
-### Add new table
+### Drop this 2 exisiting tables as we will be using another version of this 2 tables in car-person-uuid.sql
 
 	drop table car;
 	drop table person;
+
+### Read this sql file to create new tables and insert data
+
 	\i car-person-uuid.sql
 
 
-### Copy your SQL file into your Docker environment
-
-Make sure file is in current directory 
-
-	docker cp car-person-uuid.sql bebbbff75bfd:/car-person-uuid.sql
-
-Test if table and data inserted
+### Test if table is created and data inserted
 
 	select * from car;
 	select * from person;
 
-Now we set 2 cars to 2 person
+Now we assign 2 cars to 2 person
 
 	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
 	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
