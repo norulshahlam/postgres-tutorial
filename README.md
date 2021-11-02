@@ -8,9 +8,13 @@ SQL file can be found here
 
 	docker run --name postgres-tutorial -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 
+### Check if container is running & copy container id
+
+	docker container ps
+
 ### Copy your SQL file into your Docker environment
 
-Make sure file is in current directory 
+Make sure file is in current directory. 'bebbbff75bfd' is the container id. So make sure you copy your container id.
 
 	docker cp person.sql bebbbff75bfd:/person.sql
 
