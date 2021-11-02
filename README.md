@@ -1,6 +1,9 @@
 # Postgres tutorial using Docker
 
 ## Source: [https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s]
+## Postgres documentation - Datatypes: [https://www.postgresql.org/docs/14/datatype.html]
+## Postgres documentation - Functions and operators: [https://www.postgresql.org/docs/14/functions.html]
+## Postgres documentation - Aggregate functions: [https://www.postgresql.org/docs/14/functions-aggregate.html]
 
 SQL file can be found here
 
@@ -245,6 +248,8 @@ Now we assign 2 cars to 2 person
 
 	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
 	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
+
+### Queries
 
 	// check
 	select * from car;
