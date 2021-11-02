@@ -199,16 +199,12 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ### Queries  
 
-`Inner joins`
-
-Return only matching rows
+`Inner joins` - Return only matching rows
 
 	select * from person join car on person.car_id=car.id;
 	select person.first_name, car.make,car.model, car.price from person join car on person.car_id=car.id;
 
-`Left joins`
-
-Return all rows from the left (Person table) that matches on the right
+`Left joins` - Return all rows from the left (Person table) that matches on the right
 
 	select * from person left join car on person.car_id=car.id;
 	select person.first_name, car.make,car.model, car.price from person join car on person.car_id=car.id;
@@ -269,6 +265,5 @@ Now we assign 2 cars to 2 person
 	// check if file is created in your target directory
 
 
-
-
+# THE END
 
