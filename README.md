@@ -46,13 +46,15 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ### Create new table (or read from SQL file)
 
-	CREATE TABLE  person(
-	id BIGSERIAL NOT NULL PRIMARY KEY,
-	first_name VARCHAR(50) not null,
-	last_name  VARCHAR(50) not null,
-	gender  VARCHAR(5) not null,
-	date_of_birth DATE not null,
-	email VARCHAR(50) );
+create table person (
+		id BIGSERIAL NOT NULL PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	email VARCHAR(50),
+	gender VARCHAR(50) NOT NULL,
+	date_of_birth DATE NOT NULL,
+	country_of_birth VARCHAR(50)
+);
 
 ### Read this sql file to create new tables and insert data
 
@@ -161,6 +163,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	select now() - interval '1 year';
 	select now() - interval '1 month';
 	select now() + interval '1 month';
+	select now()::time + interval '1 month';
 
 	// show date only
 	select (now() + interval '1 month')::date;
@@ -186,6 +189,8 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	
 	drop table car;
 	drop table person;
+	// check if tables are deleted
+	\d
 
 ### Create new table (or read from SQL file)
 
@@ -213,6 +218,12 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 	\i car-person.sql
 
+	// test
+	\d
+	select * from person;
+	select * from car;
+
+
 ### Queries  
 
 `Inner joins` - Return only matching rows
@@ -223,7 +234,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 `Left joins` - Return all rows from the left (Person table) that matches on the right
 
 	select * from person left join car on person.car_id=car.id;
-	select person.first_name, car.make,car.model, car.price from person join car on person.car_id=car.id;
+	select person.id, person.first_name, car.make,car.model, car.price from person left join car on person.car_id=car.id;
 
 ### Extensions
 
@@ -244,12 +255,20 @@ PostgreSQL Extensions are a plug and play set of enhancements that add an extra 
 
 ### Drop this 2 exisiting tables as we will be using another version of this 2 tables in car-person-uuid.sql
 
-	drop table car;
 	drop table person;
+	drop table car;
+
+	// test
+	\d
 
 ### Read this sql file to create new tables and insert data
 
 	\i car-person-uuid.sql
+
+	// test
+	\d
+	select * from person;
+	select * from car;
 
 
 ### Test if table is created and data inserted
