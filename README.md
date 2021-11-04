@@ -56,7 +56,16 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ### Read this sql file to create new tables and insert data
 
-	\i person.sql
+	\i person.sql;
+
+### Understanding table property - [https://www.postgresql.org/docs/9.1/sql-createtable.html]
+
+	\d person;
+
+### Test if table and data is created and inserted
+
+	select * from person;
+
 
 ### Queries  
 
@@ -85,6 +94,9 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 
 	select distinct country_of_birth, count(*) from person group by country_of_birth  order by country_of_birth desc;
+
+	// using alias
+	select distinct country_of_birth as "country", count(*) as "total" from person group by country_of_birth  order by country_of_birth desc;
 
 	select distinct country_of_birth, count(*) from person group by country_of_birth having count(*)>50  order by country_of_birth desc;
 
