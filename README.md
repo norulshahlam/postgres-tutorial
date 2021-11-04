@@ -123,6 +123,7 @@ create table person (
 	select max(price) from car;
 	select min(price) from car;
 	select avg(price) from car;
+	select round(20.356363);
 	select round(avg(price),1) from car;
 	
 	// minprice of a car grouped by make and model
@@ -176,6 +177,8 @@ create table person (
 	select extract(century from now());
 
 	//AGE
+	select age(now(), '1985-12-20');
+	select extract(year from(select age(now(), '1985-12-20')));
 	select first_name, date_of_birth from person;
 	select first_name, date_of_birth, age(now(), date_of_birth) from person;
 
