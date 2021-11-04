@@ -60,7 +60,7 @@ create table person (
 
 	\i person.sql;
 
-### Understanding table property - [https://www.postgresql.org/docs/9.1/sql-createtable.html]
+### [Understanding table property](https://www.postgresql.org/docs/9.1/sql-createtable.html) 
 
 	\d person;
 
