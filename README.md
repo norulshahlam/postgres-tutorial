@@ -1,11 +1,12 @@
 # Postgres tutorial using Docker
 
-## [Video Source](https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s)
+## [Official Documentation ](https://www.postgresql.org/docs/9.6/index.html)
+## [Video Source from Amigoscode](https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s)
 ## [Postgres documentation - Datatypes](https://www.postgresql.org/docs/14/datatype.html)
 ## [Postgres documentation - Functions and operators](https://www.postgresql.org/docs/14/functions.html)
 ## [Postgres documentation - Aggregate functions](https://www.postgresql.org/docs/14/functions-aggregate.html)  
 
-SQL file can be found here
+## SQL file can be found here. Make sure you have Docker installed!
 
 ### Run this
 
