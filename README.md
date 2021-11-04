@@ -1,12 +1,19 @@
 # Postgres tutorial using Docker
 
-## [Official Documentation ](https://www.postgresql.org/docs/9.6/index.html)
-## [Video Source from Amigoscode](https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s)
-## [Postgres documentation - Datatypes](https://www.postgresql.org/docs/14/datatype.html)
-## [Postgres documentation - Functions and operators](https://www.postgresql.org/docs/14/functions.html)
-## [Postgres documentation - Aggregate functions](https://www.postgresql.org/docs/14/functions-aggregate.html)  
+### PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
-## SQL file can be found here. Make sure you have Docker installed!
+- Initial release date: 8 July 1996
+- Developer: PostgreSQL Global Development Group
+- Original author: PostgreSQL Global Development Group
+- Programming languages: PL/pgSQL, C, PL/R, PL/Python, PL/Java, MORE
+
+### [Official Documentation ](https://www.postgresql.org/docs/9.6/index.html)
+### [Video Source from Amigoscode](https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s)
+### [Postgres documentation - Datatypes](https://www.postgresql.org/docs/14/datatype.html)
+### [Postgres documentation - Functions and operators](https://www.postgresql.org/docs/14/functions.html)
+### [Postgres documentation - Aggregate functions](https://www.postgresql.org/docs/14/functions-aggregate.html)  
+
+### SQL file can be found here. Make sure you have Docker installed!
 
 ### Run this
 
