@@ -63,7 +63,15 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	// Test if table and data is created and inserted
 	select * from person;
 
-### [Understanding table property](https://www.postgresql.org/docs/9.1/sql-createtable.html) 
+### [Understanding table property](https://www.postgresql.org/docs/9.1/sql-createtable.html)         
+
+
+`PRIMARY KEY`  
+A constraint uniquely identifies each record in a table. Primary keys must contain UNIQUE values, and cannot contain NULL values. A table can have only ONE primary key; 
+
+`FOREIGN KEY`
+A constraint is used to prevent actions that would destroy links between tables. A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+
 
 	\d person;
 
@@ -94,11 +102,13 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	// any match with 14 char
 	select * from person where email like '______________';
 
+	// grouping
 	select distinct country_of_birth, count(*) from person group by country_of_birth  order by country_of_birth desc;
 
 	// using alias
 	select distinct country_of_birth as "country", count(*) as "total" from person group by country_of_birth  order by country_of_birth desc;
 
+	// further filter
 	select distinct country_of_birth, count(*) from person group by country_of_birth having count(*)>50  order by country_of_birth desc;
 
 ### Create new table (or read from SQL file)
