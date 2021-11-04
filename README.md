@@ -80,6 +80,8 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 	select * from person where country_of_birth in ('Poland', 'Australia');
 	select * from person where date_of_birth between date '1900-01-01' and '1950-01-01';
 
+### Wildcard
+
 	// any matching on the left - case sensitive
 	select * from person where email like '%@google.com';
 
@@ -180,7 +182,7 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ## RELATIONAL TABLE  
 
-### Drop this 2 exisiting tables as we will be using another version of this 2 tables in car-person.sql
+### Drop this 2 existing tables as we will be using another version of this 2 tables in car-person.sql
 	
 	drop table car;
 	drop table person;
