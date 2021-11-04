@@ -1,9 +1,9 @@
 # Postgres tutorial using Docker
 
-## Source: [https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s]
-## Postgres documentation - Datatypes: [https://www.postgresql.org/docs/14/datatype.html]
-## Postgres documentation - Functions and operators: [https://www.postgresql.org/docs/14/functions.html]
-## Postgres documentation - Aggregate functions: [https://www.postgresql.org/docs/14/functions-aggregate.html]
+## [Video Source](https://www.youtube.com/watch?v=5hzZtqCNQKk&t=4034s)
+## [Postgres documentation - Datatypes](https://www.postgresql.org/docs/14/datatype.html)
+## [Postgres documentation - Functions and operators](https://www.postgresql.org/docs/14/functions.html)
+## [Postgres documentation - Aggregate functions](https://www.postgresql.org/docs/14/functions-aggregate.html)  
 
 SQL file can be found here
 
@@ -11,7 +11,7 @@ SQL file can be found here
 
 	docker run --name postgres-tutorial -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres
 
-### Check if container is running & copy container id
+### Check if container is running & copy container id. Copy the container id.
 
 	docker container ps
 
