@@ -46,20 +46,20 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ### Create new table (or read from SQL file)
 
-create table person (
+	create table person (
 		id BIGSERIAL NOT NULL PRIMARY KEY,
-	first_name VARCHAR(50) NOT NULL,
-	last_name VARCHAR(50) NOT NULL,
-	email VARCHAR(50),
-	gender VARCHAR(50) NOT NULL,
-	date_of_birth DATE NOT NULL,
-	country_of_birth VARCHAR(50)
-);
+		first_name VARCHAR(50) NOT NULL,
+		last_name VARCHAR(50) NOT NULL,
+		email VARCHAR(50),
+		gender VARCHAR(50) NOT NULL,
+		date_of_birth DATE NOT NULL,
+		country_of_birth VARCHAR(50)
+	);
 
 ### Read this sql file to create new tables and insert data
 
 	\i person.sql;
-	
+
 	// Test if table and data is created and inserted
 	select * from person;
 
