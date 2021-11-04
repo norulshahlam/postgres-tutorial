@@ -233,6 +233,11 @@ A constraint uniquely identifies each record in a table. Primary keys must conta
 `FOREIGN KEY`  
 A constraint is used to prevent actions that would destroy links between tables. A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
 
+This 2 tables have 1-to-1 realtionship - one person can have only one car. To add on, there is another type of relationship
+- 1-to-many (1 person can have/own many car)
+- Many-to-one (Many person can have 1 car or a car can belong to many person/owner)
+- Many-to-many (Many person having many cars)
+
 ### Queries  
 
 `Inner joins` - Return only matching rows
