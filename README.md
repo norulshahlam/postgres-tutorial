@@ -59,15 +59,13 @@ create table person (
 ### Read this sql file to create new tables and insert data
 
 	\i person.sql;
+	
+	// Test if table and data is created and inserted
+	select * from person;
 
 ### [Understanding table property](https://www.postgresql.org/docs/9.1/sql-createtable.html) 
 
 	\d person;
-
-### Test if table and data is created and inserted
-
-	select * from person;
-
 
 ### Queries  
 
