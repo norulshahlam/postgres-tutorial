@@ -65,15 +65,11 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 ### [Understanding table property](https://www.postgresql.org/docs/9.1/sql-createtable.html)         
 
+	\d person;
 
 `PRIMARY KEY`  
 A constraint uniquely identifies each record in a table. Primary keys must contain UNIQUE values, and cannot contain NULL values. A table can have only ONE primary key; 
 
-`FOREIGN KEY`
-A constraint is used to prevent actions that would destroy links between tables. A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
-
-
-	\d person;
 
 ### Queries  
 
@@ -203,7 +199,7 @@ A constraint is used to prevent actions that would destroy links between tables.
 	// check if tables are deleted
 	\d
 
-### Create new table (or read from SQL file)
+### Create new table (or read from SQL file)  
 
 	create table car (
 		id BIGSERIAL NOT NULL PRIMARY KEY,
@@ -234,6 +230,8 @@ A constraint is used to prevent actions that would destroy links between tables.
 	select * from person;
 	select * from car;
 
+`FOREIGN KEY`  
+A constraint is used to prevent actions that would destroy links between tables. A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table. The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
 
 ### Queries  
 
