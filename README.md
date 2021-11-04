@@ -70,14 +70,14 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 ### Queries  
 
 	select * from person;
+	select * from person limit 10;
+	select * from person offset 5 limit 10;
 	select * from person order by gender;
 	select * from person order by country_of_birth desc;
 	select distinct country_of_birth from person order by country_of_birth desc;
 	select * from person where country_of_birth='Poland';
 	select * from person where country_of_birth='Poland' OR country_of_birth='Australia';
 	select * from person where country_of_birth in ('Poland', 'Australia');
-	select * from person limit 10;
-	select * from person offset 5 limit 10;
 	select * from person where date_of_birth between date '1900-01-01' and '1950-01-01';
 
 	// any matching on the left - case sensitive
@@ -91,7 +91,6 @@ Make sure file is in current directory. 'bebbbff75bfd' is the container id. So m
 
 	// any match with 14 char
 	select * from person where email like '______________';
-
 
 	select distinct country_of_birth, count(*) from person group by country_of_birth  order by country_of_birth desc;
 
