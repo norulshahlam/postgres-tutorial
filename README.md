@@ -296,7 +296,7 @@ PostgreSQL Extensions are a plug and play set of enhancements that add an extra 
 Now we assign 2 cars to 2 person
 
 	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
-	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';
+	update person set car_uid = 'b571d6b0-ac1c-46cd-b717-a46f0186990d' where person_uid='27a9e026-9662-4b4f-8073-8cac0abda62e';  
 
 ### Queries
 
