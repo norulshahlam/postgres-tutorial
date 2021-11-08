@@ -318,6 +318,9 @@ Now we assign 2 cars to 2 person
 
 	// check if file is created in your target directory
 
+### Bonus - Self join
+
+	Write an SQL query to find the employees who earn more than their managers.
 
 # THE END
 
